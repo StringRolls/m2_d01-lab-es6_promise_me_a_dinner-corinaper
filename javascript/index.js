@@ -114,21 +114,15 @@ let html = document.querySelector("#brusselsSprouts")
 
 Promise.all( [sprouts1, sprouts2, sprouts3, sprouts4, sprouts5, sprouts6, sprouts7, sprouts8])
 
-.then ((valueArray) => {html.innerHTML += `<li>${valueArray[0]}</li>`
-return valueArray})
-.then ((valueArray) => {html.innerHTML += `<li>${valueArray[1]}</li>`
-return valueArray})
-.then ((valueArray) => {html.innerHTML += `<li>${valueArray[2]}</li>`
-return valueArray})
-.then ((valueArray) => {html.innerHTML += `<li>${valueArray[3]}</li>`
-return valueArray})
-.then ((valueArray) => {html.innerHTML += `<li>${valueArray[4]}</li>`
-return valueArray})
-.then ((valueArray) => {html.innerHTML += `<li>${valueArray[5]}</li>`
-return valueArray})
-.then ((valueArray) => {html.innerHTML += `<li>${valueArray[6]}</li>`
-return valueArray})
-.then ((valueArray) => html.innerHTML += `<li>${valueArray[7]}</li>`)
-.then (() => html.innerHTML += `<li>Brussels sprouts are ready!</li>`)
-.then(()=>document.getElementById("brusselsSproutsImg").removeAttribute("hidden"))
+.then ((valueArray) => {
+  html.innerHTML += `<li>${valueArray[0]}</li>
+  <li>${valueArray[1]}</li>
+ <li>${valueArray[2]}</li>
+ <li>${valueArray[3]}</li>
+ <li>${valueArray[4]}</li>
+ <li>${valueArray[5]}</li>
+ <li>${valueArray[6]}</li>
+ <li>${valueArray[7]}</li>
+ <li>Brussels sprouts are ready!</li>`
+ document.getElementById("brusselsSproutsImg").removeAttribute("hidden")})
 .catch((err)=> console.log(err))
